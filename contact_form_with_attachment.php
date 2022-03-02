@@ -51,7 +51,7 @@ if(isset($_POST['submit'])){
             if($uploadStatus == 1){
                 
                 // Recipient
-                $toEmail = 'pawan@zsoftware.tech';
+                $toEmail = 'rv@zsoftware.tech';
 
                 // Sender
                 $from = 'raghavkhurana509@gmail.com';
