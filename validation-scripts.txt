@@ -1,0 +1,68 @@
+		<script>function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}</script>		
+ <script language="Javascript" type="text/javascript">
+
+        function onlyAlphabets(e,t) {
+            try {
+                if (window.event) {
+                    var charCode = window.event.keyCode;
+                }
+                else if (e) {
+                    var charCode = e.which;
+                }
+                else { return true; }
+                if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+                    return true;
+                else
+                    return false;
+            }
+            catch (err) {
+                alert(err.Description);
+            }
+        }
+
+    </script>
+
+<script type="text/javascript">
+    function blockSpecialChar(e){
+        var k;
+        document.all ? k = e.keyCode : k = e.which;
+        return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+        }
+    </script>
+																																					 <script>function validateEmail(emailField){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(emailField.value) == false) 
+        {
+            alert('Invalid Email Address');
+            return false;
+        }
+
+        return true;
+
+}</script>
+<script>
+ $('#fname').keypress(function (e) {
+	 var startPos = e.currentTarget.selectionStart;
+    if (e.which === 32 && startPos==0)
+        e.preventDefault();
+        var regex = new RegExp("^[a-zA-Z \s]+$");
+        var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+        if (regex.test(str)) {
+            return true;
+        }
+        else
+        {
+        e.preventDefault();
+        alert('Please Enter Alphabets Only');
+        return false;
+        }
+    });
+ </script>
